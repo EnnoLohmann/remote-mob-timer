@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 # Read more about setting it up
 # https://medium.com/@ljmocic/deploying-react-application-to-aws-s3-using-github-actions-85addacaeace
 
