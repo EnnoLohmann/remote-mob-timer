@@ -12,6 +12,22 @@ on:
 # https://medium.com/@ljmocic/deploying-react-application-to-aws-s3-using-github-actions-85addacaeace
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mob-timer-frontend
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x 
+      - name: Install dependencies
+        run: npm install    
+      - name: Generate build
+        run: npm run jest
   build:
     runs-on: ubuntu-latest
     defaults:

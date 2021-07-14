@@ -1,8 +1,9 @@
 <script>
 	export let href;
+	export let text;
 </script>
 
-<a {href} class="button"> <slot /> </a>
+<a {href} class="button">{text}</a>
 
 <style lang="scss">
 	@import '../../app.scss';
