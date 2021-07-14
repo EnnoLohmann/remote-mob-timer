@@ -1,0 +1,67 @@
+Arguments: 
+  /Users/ennolohmann/.nvm/versions/node/v14.17.0/bin/node /Users/ennolohmann/.nvm/versions/node/v14.17.0/bin/yarn add datefns
+
+PATH: 
+  /Users/ennolohmann/.nvm/versions/node/v14.17.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/ennolohmann/.nvm/versions/node/v14.17.0/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/datefns: Not found
+      at Request.params.callback [as _callback] (/Users/ennolohmann/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/Users/ennolohmann/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:376:20)
+      at Request.<anonymous> (/Users/ennolohmann/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:376:20)
+      at IncomingMessage.<anonymous> (/Users/ennolohmann/.nvm/versions/node/v14.17.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:482:28)
+      at IncomingMessage.emit (events.js:388:22)
+      at endReadableNT (internal/streams/readable.js:1336:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "~TODO~",
+    "version": "0.0.1",
+    "scripts": {
+      "dev": "svelte-kit dev",
+      "build": "svelte-kit build",
+      "preview": "svelte-kit preview",
+      "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+      "format": "prettier --write --plugin-search-dir=. ."
+    },
+    "devDependencies": {
+      "@sveltejs/kit": "next",
+      "autoprefixer": "^10.3.1",
+      "eslint": "^7.22.0",
+      "eslint-config-prettier": "^8.1.0",
+      "eslint-plugin-svelte3": "^3.2.0",
+      "postcss": "^8.3.5",
+      "prettier": "~2.2.1",
+      "prettier-plugin-svelte": "^2.2.0",
+      "svelte": "^3.34.0",
+      "svelte-preprocess": "^4.7.4",
+      "tailwindcss": "^2.2.4"
+    },
+    "type": "module",
+    "dependencies": {
+      "@fontsource/fira-mono": "^4.2.2",
+      "@lukeed/uuid": "^2.0.0",
+      "cookie": "^0.4.1",
+      "node-sass": "^6.0.1",
+      "sass": "^1.35.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
