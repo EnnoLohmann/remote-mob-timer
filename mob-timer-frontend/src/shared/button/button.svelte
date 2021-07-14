@@ -3,15 +3,19 @@
 	export let text;
 </script>
 
-<a {href} class="button">{text}</a>
+<div class="button">
+	<a {href}>{text}</a>
+</div>
 
 <style lang="scss">
 	@import '../../app.scss';
 
 	.button {
+		padding: 12px 20px;
+		min-width: 200px;
+		text-align: center;
 		background-color: $dark-02;
 		border-radius: 8px;
-		padding: 12px 20px;
 		color: $white;
 		font-size: 18px;
 		border: 2px solid $highlight-02;

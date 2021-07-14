@@ -1,36 +1,41 @@
 <script>
-	import format from 'date-fns/format';
-
-	let date = format(new Date(), 'HH:mm:ss - dd. MMMM yyyy');
-	setInterval(() => {
-		date = format(new Date(), 'HH:mm:ss - dd. MMMM yyyy');
-	}, 1000);
+	export let label = 'Label';
+	export let inputText = '';
+	let focus = false;
 </script>
 
-<div class="header p-3">
-	<p class="header__text">Mob Programming Timer</p>
-	<p class="header__timer">{date}</p>
+<div class="input px-2 pt-3 pb-1">
+	<p class:input__label--focus={focus} class="input__label">{label}</p>
+	<input
+		bind:value={inputText}
+		on:focus={() => (focus = true)}
+		on:blur={() => (focus = false)}
+		class="input__field"
+	/>
 </div>
 
 <style lang="scss">
 	@import '../../app.scss';
-	.header {
-		background-color: $dark-02;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		border-bottom: 4px solid $highlight-01;
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		&__text {
-			color: $highlight-01;
-			font-size: 24px;
+	.input {
+		position: relative;
+		background-color: $white;
+		border: 2px solid $highlight-02;
+		&__field {
+			outline: none;
 		}
-		&__timer {
-			color: $white;
+
+		&__label {
+			position: absolute;
 			font-size: 18px;
+			top: 8px;
+			left: 6px;
+			transition: all 0.4s;
+			pointer-events: none;
+		}
+
+		&__label--focus {
+			font-size: 12px;
+			top: 0px;
 		}
 	}
 </style>
