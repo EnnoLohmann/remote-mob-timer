@@ -3,7 +3,7 @@
 	import Button from './../shared/button/button.svelte';
 	import Input from './../shared/input/input.svelte';
 
-	let inputText = '';
+	let inputText = 'placeholder';
 </script>
 
 <ImageBackground />
