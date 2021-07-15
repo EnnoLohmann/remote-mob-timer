@@ -8,8 +8,8 @@
 </script>
 
 <div class="header p-3">
-	<p class="header__text header__text--wide">CollabCodes</p>
-	<p class="header__text header__text--small">CC</p>
+	<a href="/" class="header__text header__text--wide">CollabCodes</a>
+	<a href="/" class="header__text header__text--small">CC</a>
 	<p class="header__timer">{date}</p>
 </div>
 

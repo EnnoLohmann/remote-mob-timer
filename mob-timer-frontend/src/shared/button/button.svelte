@@ -4,14 +4,13 @@
 </script>
 
 <div class="button">
-	<a {href}>{text}</a>
+	<a class="button__link" {href}>{text}</a>
 </div>
 
 <style lang="scss">
 	@import '../../app.scss';
 
 	.button {
-		padding: 12px 20px;
 		min-width: 200px;
 		text-align: center;
 		background-color: $dark-02;
@@ -20,6 +19,11 @@
 		font-size: 18px;
 		border: 2px solid $highlight-02;
 		transition: all 0.4s;
+
+		&__link {
+			padding: 12px 20px;
+			display: block;
+		}
 
 		&:hover {
 			border: 2px solid $highlight-01;
