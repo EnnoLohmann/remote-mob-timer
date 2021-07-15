@@ -5,7 +5,7 @@
 </script>
 
 <div class="input px-2 pt-3 pb-1">
-	<p class:input__label--focus={focus} class="input__label">{label}</p>
+	<p class:input__label--focus={focus || inputText} class="input__label">{label}</p>
 	<input
 		bind:value={inputText}
 		on:focus={() => (focus = true)}
