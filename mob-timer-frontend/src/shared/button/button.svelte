@@ -1,17 +1,17 @@
 <script>
-	export let href;
 	export let text;
+	let className;
+	export { className as class };
 </script>
 
-<div class="button">
-	<a class="button__link" {href}>{text}</a>
-</div>
+<button on:click class={`button ${className}`}>
+	{text}
+</button>
 
 <style lang="scss">
 	@import '../../app.scss';
 
 	.button {
-		min-width: 200px;
 		text-align: center;
 		background-color: $dark-02;
 		border-radius: 8px;
@@ -19,11 +19,7 @@
 		font-size: 18px;
 		border: 2px solid $highlight-02;
 		transition: all 0.4s;
-
-		&__link {
-			padding: 12px 20px;
-			display: block;
-		}
+		padding: 12px 20px;
 
 		&:hover {
 			border: 2px solid $highlight-01;

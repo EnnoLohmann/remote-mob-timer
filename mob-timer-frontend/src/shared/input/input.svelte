@@ -1,15 +1,19 @@
 <script>
 	export let label = 'Label';
 	export let inputText = '';
+	let className = '';
+	export { className as class };
+
 	let focus = false;
 </script>
 
-<div class="input px-2 pt-3 pb-1">
+<div class={`input px-2 pt-3 ${className}`}>
 	<p class:input__label--focus={focus || inputText} class="input__label">{label}</p>
 	<input
 		bind:value={inputText}
 		on:focus={() => (focus = true)}
 		on:blur={() => (focus = false)}
+		on:keypress
 		class="input__field"
 	/>
 </div>
@@ -20,7 +24,16 @@
 		position: relative;
 		background-color: $white;
 		border: 2px solid $highlight-02;
+		border-radius: 8px;
+
+		&:focus-within {
+			border: 2px solid $highlight-01;
+		}
+
 		&__field {
+			width: 100%;
+			height: 100%;
+			line-height: 32px;
 			outline: none;
 		}
 
